@@ -1,0 +1,346 @@
+/* =========================================
+   1. VARIÁVEIS CSS (:root) E RESET BÁSICO
+   ========================================= */
+:root {
+  --fundo: #FFF8F6;
+  --card: #FFFFFF;
+  --texto: #2D1E18;
+  --primaria: #D85A7F;
+  --primaria-hover: #B84364;
+  --destaque: #E6A15C;
+  --borda: #EAE0DD;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* Container de largura fixa */
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   2. CABEÇALHO E NAVEGAÇÃO (<header>, <nav>)
+   ========================================= */
+header {
+  background-color: var(--card);
+  border-bottom: 1px solid var(--borda);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primaria);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--primaria);
+}
+
+/* =========================================
+   3. BANNER HERO (<section>)
+   ========================================= */
+.hero {
+  background-color: #FDF0ED;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--borda);
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: var(--primaria);
+  margin-bottom: 0.8rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  color: #555;
+}
+
+/* Botão com :hover e transição */
+.btn {
+  display: inline-block;
+  background-color: var(--primaria);
+  color: #ffffff;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--primaria-hover);
+  transform: translateY(-2px);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* =========================================
+   4. SEÇÕES E GRID (<section>, <article>)
+   ========================================= */
+section {
+  padding: 3rem 0;
+}
+
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.titulo-secao h2 {
+  font-size: 1.8rem;
+  color: var(--texto);
+}
+
+/* Layout em CSS Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+article {
+  background-color: var(--card);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+figure {
+  margin-bottom: 1rem;
+}
+
+figure img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+article h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primaria);
+}
+
+article p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.preco {
+  font-weight: bold;
+  color: var(--texto);
+}
+
+/* =========================================
+   5. TABELA SEMÂNTICA (<table>)
+   ========================================= */
+.tabela-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--card);
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--borda);
+  text-align: left;
+}
+
+th {
+  background-color: #FDF0ED;
+  color: var(--primaria);
+}
+
+/* =========================================
+   6. FORMULÁRIO SEMÂNTICO (<form>)
+   ========================================= */
+form {
+  background-color: var(--card);
+  padding: 1.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--borda);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.campo {
+  margin-bottom: 1.2rem;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: 2px solid var(--primaria);
+}
+
+/* =========================================
+   7. RODAPÉ (<footer>)
+   ========================================= */
+footer {
+  background-color: var(--texto);
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer p {
+  color: #ccc;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+/* =========================================
+   8. BANNER DE COOKIES (ADAPTADO COM AS CORES DO SITE)
+   ========================================= */
+.banner-cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(45, 30, 24, 0.97); /* Cor var(--texto) em tom escuro chocolate */
+  border-top: 3px solid var(--primaria); /* Borda superior rosa */
+  color: #ffffff;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  font-size: 14px;
+}
+
+/* Agrupador dos botões */
+.btn-group-cookies {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Botão Aceitar (Usando a cor primaria do site) */
+.btn-cookies {
+  background-color: var(--primaria);
+  color: #ffffff;
+  border: 1px solid var(--primaria);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-cookies:hover {
+  background-color: var(--primaria-hover);
+  border-color: var(--primaria-hover);
+}
+
+/* Botão Recusar (Estilo secundário transparente) */
+.btn-cookies.btn-recusar {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.btn-cookies.btn-recusar:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Classe utilitária para ocultar o banner */
+.oculto {
+  display: none !important;
+}
+
+/* =========================================
+   9. RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 600px) {
+  .header-flex {
+    flex-direction: column;
+  }
+ 
+  nav ul {
+    gap: 0.8rem;
+  }
+
+  .banner-cookies {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn-group-cookies {
+    width: 100%;
+    justify-content: center;
+  }
+}

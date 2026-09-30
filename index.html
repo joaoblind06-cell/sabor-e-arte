@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabor & Arte | Confeitaria Artesanal</title>
+  <!-- Vinculação do arquivo CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO SEMÂNTICO -->
+  <header>
+    <div class="container header-flex">
+      <div class="logo">🎂 Sabor & Arte</div>
+      <nav>
+        <ul>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#tabela">Tamanhos</a></li>
+          <li><a href="#encomenda">Encomendas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <h1>Bolos & Doces Artesanais</h1>
+        <p>Ingredientes selecionados e produção sob medida para adoçar suas festas e momentos especiais.</p>
+        <a href="#encomenda" class="btn">💬 Fazer Orçamento no WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="container">
+      <div class="titulo-secao">
+        <h2>Nossos Diferenciais</h2>
+      </div>
+      <div class="grid">
+        <article>
+          <h3>🌿 100% Artesanal</h3>
+          <p>Sem essências artificiais. Usamos baunilha natural e chocolates nobres.</p>
+        </article>
+        <article>
+          <h3>🎨 Design Exclusivo</h3>
+          <p>Personalizamos a decoração do bolo exatamente com o tema do seu evento.</p>
+        </article>
+        <article>
+          <h3>🛵 Entrega Segura</h3>
+          <p>Transporte refrigerado para seu bolo chegar perfeito até o local da festa.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="container">
+      <div class="titulo-secao">
+        <h2>Cardápio em Destaque</h2>
+      </div>
+      <div class="grid">
+        <article>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&auto=format&fit=crop" alt="Bolo Red Velvet">
+          </figure>
+          <h3>Bolo Red Velvet</h3>
+          <p>Massa aveludada de cacau com recheio cremoso de cream cheese.</p>
+          <div class="preco">A partir de R$ 120,00</div>
+        </article>
+
+        <article>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&auto=format&fit=crop" alt="Torta Brownie">
+          </figure>
+          <h3>Brownie Ninho & Nutella</h3>
+          <p>Base densa de brownie 70% cacau, cobertura de Leite Ninho e Nutella.</p>
+          <div class="preco">A partir de R$ 110,00</div>
+        </article>
+
+        <article>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=400&auto=format&fit=crop" alt="Doces Finos">
+          </figure>
+          <h3>Kit Doces Finos</h3>
+          <p>Caixa com 50 unidades variadas entre brigadeiros gourmet e tartaletes.</p>
+          <div class="preco">R$ 180,00</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TABELA SEMÂNTICA -->
+    <section id="tabela" class="container">
+      <div class="titulo-secao">
+        <h2>Guia de Tamanhos e Rendimento</h2>
+      </div>
+      <div class="tabela-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Tamanho</th>
+              <th>Diâmetro</th>
+              <th>Rendimento</th>
+              <th>Preço Base</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Pequeno (P)</strong></td>
+              <td>15 cm</td>
+              <td>10 a 12 fatias</td>
+              <td>R$ 120,00</td>
+            </tr>
+            <tr>
+              <td><strong>Médio (M)</strong></td>
+              <td>20 cm</td>
+              <td>20 a 24 fatias</td>
+              <td>R$ 185,00</td>
+            </tr>
+            <tr>
+              <td><strong>Grande (G)</strong></td>
+              <td>25 cm</td>
+              <td>30 a 35 fatias</td>
+              <td>R$ 250,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO SEMÂNTICO -->
+    <section id="encomenda" class="container">
+      <div class="titulo-secao">
+        <h2>Faça sua Encomenda</h2>
+      </div>
+      <form action="#" method="POST">
+        <div class="campo">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+        </div>
+
+        <div class="campo">
+          <label for="whatsapp">WhatsApp:</label>
+          <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(19) 99999-9999">
+        </div>
+
+        <div class="campo">
+          <label for="produto">Produto Desejado:</label>
+          <select id="produto" name="produto" required>
+            <option value="">Selecione...</option>
+            <option value="red-velvet">Bolo Red Velvet</option>
+            <option value="brownie">Brownie Ninho & Nutella</option>
+            <option value="kit-doces">Kit Doces Finos</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="obs">Detalhes e Data da Festa:</label>
+          <textarea id="obs" name="obs" rows="3" placeholder="Ex: Para o dia 15/10, bolo sem nozes."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-full">Enviar Pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- RODAPÉ SEMÂNTICO -->
+  <footer>
+    <div class="container">
+      <p><strong>Sabor & Arte Confeitaria Artesanal</strong></p>
+      <p>📍 Rua das Camélias, 142 — Campinas/SP | 📞 (19) 99999-9999</p>
+      <p>&copy; 2026 - Engenharia Reversa Front-End HTML5 e CSS3.</p>
+    </div>
+  </footer>
+
+  <!-- BANNER DE AVISO DE COOKIES COM ACEITAR E RECUSAR -->
+  <div id="banner-cookies" class="banner-cookies">
+    <p>
+      Utilizamos cookies para personalizar sua experiência. Ao continuar navegando, você concorda com a nossa política.
+    </p>
+    <div class="btn-group-cookies">
+      <button id="btn-recusar-cookies" class="btn-cookies btn-recusar">Recusar</button>
+      <button id="btn-aceitar-cookies" class="btn-cookies">Entendi e Aceito</button>
+    </div>
+  </div>
+
+  <!-- Vinculação do arquivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>
